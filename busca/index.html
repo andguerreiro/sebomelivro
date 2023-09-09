@@ -4,20 +4,70 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Buscador do Sebomelivro. Encontre todos os livros à venda pesquisando por título ou autor.">
-<title>Buscador Sebomelivro</title>
-<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<title>Busca - Sebomelivro</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .search-container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .search-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+</style>
 </head>
 <body>
-<header class="center">
-  <div class="title">Buscador</div>
-</header>
-<div class="search center">
-  <form target="_blank" action="https://www.estantevirtual.com.br/busca">
-    <input type="hidden" name="vendedor" value="sebomelivro">
-    <input type="search" placeholder="Digite um título ou autor..." name="q">
-    <button type="submit">Garimpar</button>
-    <button type="reset">Limpar</button>
-  </form>
+<div class="center">
+  <div class="search-container">
+    <h1 class="title">Busca Sebomelivro</h1>
+    <form target="_blank" action="https://www.estantevirtual.com.br/busca">
+      <input class="search-input" type="hidden" name="vendedor" value="sebomelivro">
+      <input class="search-input" type="search" placeholder="Digite um título ou autor..." name="q">
+      <button class="search-button" type="submit">Garimpar</button>
+    </form>
+  </div>
 </div>
 </body>
 </html>
