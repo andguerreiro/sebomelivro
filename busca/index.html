@@ -6,54 +6,68 @@
   <link rel="icon" type="image/png" href="../logo.png" />
   <meta name="description" content="Buscador do Sebomelivro. Encontre todos os livros à venda pesquisando por título ou autor.">
   <title>Busca - Sebomelivro</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: black;
+    }
 
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    min-height: 100vh;
-  }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #343541;
+        color: white;
+      }
+    }
 
-  .search-container {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 600px;
-  }
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      min-height: 100vh;
+    }
 
-  .title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: black;
-  }
+    .search-container {
+      text-align: center;
+      background-color: inherit;
+      border-radius: 5px;
+      padding: 20px;
+      max-width: 600px;
+    }
 
-  .search-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+    .title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 
-  .search-button {
-    padding: 10px 20px;
-    background-color: black;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 120px;
-  }
-</style>
+    img {
+        display: block;
+        margin: 10px auto;
+        border-radius: 50%;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .search-button {
+      padding: 10px 20px;
+      background-color: black;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 120px;
+    }
+  </style>
 </head>
 <body>
 <div class="center">
