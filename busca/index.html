@@ -25,7 +25,7 @@
     .center {
       display: flex;
       justify-content: center;
-      align-items: top;
+      align-items: center;
       min-height: 100vh;
     }
 
@@ -36,15 +36,12 @@
       max-width: 600px;
     }
 
-    .title {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
     img {
-        display: block;
-        margin: 10px auto;
-        border-radius: 50%;
+      display: block;
+      margin: 10px auto;
+      border-radius: 50%;
+      height: 160px;
+      width: 160px;
     }
 
     .search-input {
@@ -70,17 +67,17 @@
   </style>
 </head>
 <body>
-<div class="center">
-  <div class="search-container">
-    <a href="../"><img src="../logo.png" height="160px" width="160px" alt="Logo"></a>
-    <form target="_blank" action="https://www.estantevirtual.com.br/busca">
-      <input class="search-input" type="hidden" name="vendedor" value="sebomelivro">
-      <input class="search-input" type="search" placeholder="Digite um título ou autor..." name="q" autofocus>
-      <button class="search-button" type="submit">Garimpar</button>
-      <button class="search-button" type="reset">Limpar</button>
-    </form>
-    <p>"Um livro é um sonho que você segura em suas mãos." - Neil Gaiman</p>
+  <div class="center">
+    <div class="search-container">
+      <a href="../"><img src="../logo.png" alt="Logo"></a>
+      <form target="_blank" action="https://www.estantevirtual.com.br/busca">
+        <input class="search-input" type="hidden" name="vendedor" value="sebomelivro">
+        <input class="search-input" type="search" placeholder="Digite um título ou autor..." name="q" autofocus>
+        <button class="search-button" type="submit">Garimpar</button>
+        <button class="search-button" type="reset">Limpar</button>
+      </form>
+      <p>"Um livro é um sonho que você segura em suas mãos." - Neil Gaiman</p>
+    </div>
   </div>
-</div>
 </body>
 </html>
