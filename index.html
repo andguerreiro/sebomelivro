@@ -32,28 +32,24 @@
       }
     }
 
-    .css-typing span {
-      display: inline-block;
-      opacity: 0;
-    }
-
     .css-typing {
       white-space: pre-line;
     }
   </style>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
-    $(document).ready(function() {
+    document.addEventListener("DOMContentLoaded", function() {
       var str = 'O Sebomelivro é um sebo digital de livros usados.\n\nTodos os livros à venda estão disponíveis na Estante Virtual. Você pode garimpar pelo título, autor ou utilizando os filtros.\n\nSe não quiser pagar frete, pode retirar seu pedido pessoalmente comigo nas catracas do metrô Fradique Coutinho ou arredores.\n\nCaso tenha livros para doar, eu coleto no local (São Paulo, SP). Basta agendar um horário.\n\nEntre em contato pelo WhatsApp (11) 98135-0566. Nele, além de agendar os serviços acima, também posso te enviar fotos detalhadas de um livro antes de você comprar.\n\nEssa página simula um texto digitado por uma máquina de escrever, o que nos remete à aura nostáugica dos livros antigos. E sim, é só isso mesmo. Sem fotos, sem vídeos, sem links, sem redes sociais. Assim, sobra mais tempo pra gente ler um livro.\n\nBoas leituras!\n\nA.M. Guerreiro\n\n"Um leitor vive mil vidas antes de morrer, o homem que nunca lê vive apenas uma." - George R.R. Martin';
 
-      var spans = '<span>' + str.split('').join('</span><span>').replace(/\n/g, '<br>') + '</span>';
-      $(spans).hide().appendTo('.css-typing').each(function (i) {
-        $(this).delay(30 * i).css({
-          display: 'inline',
-          opacity: 0
-        }).animate({
-          opacity: 1
-        }, 100);
+      var typingContainer = document.querySelector('.css-typing');
+      str.split('').forEach(function(char, index) {
+        var span = document.createElement('span');
+        span.innerHTML = char.replace(/\n/g, '<br>');
+        span.style.opacity = 0;
+        typingContainer.appendChild(span);
+
+        setTimeout(function() {
+          span.style.opacity = 1;
+        }, 30 * index);
       });
     });
   </script>
