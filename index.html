@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -14,17 +15,28 @@
       line-height: 1.6;
       font-size: 1.3em;
     }
+
+    a {
+      color: black;
+    }
+
     .css-typing {
       white-space: pre-line;
     }
+
     .footer {
       font-family: sans-serif;
       font-style: italic;
       font-size: 0.8em;
     }
+
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #333;
+        color: white;
+      }
+
+      a {
         color: white;
       }
     }
@@ -33,17 +45,22 @@
 </head>
 <body>
   <div class="css-typing"></div>
-  <p class="footer">_____<br>(1) <a href="https://www.estantevirtual.com.br/livreiros/sebomelivro" target="_blank">sebomelivro.com/loja</a><br>(2) <a href="https://api.whatsapp.com/send/?phone=5511981350566&text&type=phone_number&app_absent=0" target="_blank">sebomelivro.com/contato</a><br>(3) <a href="https://blogmelivro.wordpress.com/" target="_blank">sebomelivro.com/blog</a></p>
+  <p class="footer">_____<br>(1) <a href="https://www.estantevirtual.com.br/livreiros/sebomelivro" target="_blank">sebomelivro.com/loja</a><br>(2) <a href="https://wa.me/551198135055" target="_blank">sebomelivro.com/contato</a><br>(3) <a href="https://blogmelivro.wordpress.com/" target="_blank">sebomelivro.com/blog</a></p>
   <script defer>
     document.addEventListener("DOMContentLoaded", function () {
-      var e = "O Sebomelivro é um sebo digital de livros usados.\n\nOs livros disponíveis são vendidos pela Estante Virtual (1) ou por mensagem via WhatsApp (2) e os pedidos são entregues pelos Correios ou pessoalmente nas catracas do metrô Fradique Coutinho.\n\nVocê também pode doar seus livros sem sair de casa. Basta entrar em contato e agendar uma coleta gratuita no seu endereço em São Paulo.\n\nConfira meus artigos sobre livros no Blogmelivro (3).\n\nNo sebomelivro.com não há fotos, vídeos ou redes sociais. É como uma página de livro sendo digitada. Um convite para mergulhar nas palavras sem distrações.\n\nBoas leituras!\n\nA.M. Guerreiro, livreiro";
-      var t = document.querySelector(".css-typing");
-      e.split("").forEach(function (e, n) {
-        var a = document.createElement("span");
-        a.innerHTML = e.replace(/\n/g, "<br>"), a.style.opacity = 0, t.appendChild(a), setTimeout(function () {
-          a.style.opacity = 1
-        }, 40 * n)
-      })
+      var text = "O Sebomelivro é um sebo digital de livros usados.\n\nOs livros disponíveis são vendidos pela Estante Virtual (1) ou por mensagem via WhatsApp (2), e os pedidos são entregues pelos Correios ou pessoalmente nas catracas do metrô Fradique Coutinho.\n\nVocê também pode doar seus livros sem sair de casa. Basta entrar em contato e agendar uma coleta gratuita no seu endereço em São Paulo.\n\nConfira meus artigos sobre livros no Blogmelivro (3).\n\nNo sebomelivro.com não há fotos nem vídeos. É como uma página de livro sendo digitada. Um convite para mergulhar nas palavras sem distrações.\n\nBoas leituras!\n\nA.M. Guerreiro, livreiro";
+      var typingContainer = document.querySelector(".css-typing");
+
+      text.split("").forEach(function (char, index) {
+        var span = document.createElement("span");
+        span.innerHTML = char.replace(/\n/g, "<br>");
+        span.style.opacity = 0;
+        typingContainer.appendChild(span);
+
+        setTimeout(function () {
+          span.style.opacity = 1;
+        }, 40 * index);
+      });
     });
   </script>
 </body>
