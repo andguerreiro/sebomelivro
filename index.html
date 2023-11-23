@@ -10,12 +10,17 @@
       max-width: 700px;
       margin: 0 auto;
       padding: 15px;
-      font-family: sans-serif;
+      font-family: sans;
       line-height: 1.6;
-      font-size: 1.2em;
+      font-size: 1.3em;
     }
     .css-typing {
       white-space: pre-line;
+    }
+    .footer {
+      font-family: sans-serif;
+      font-style: italic;
+      font-size: 0.8em;
     }
     @media (prefers-color-scheme: dark) {
       body {
@@ -28,9 +33,10 @@
 </head>
 <body>
   <div class="css-typing"></div>
+  <p class="footer">_____<br>(1) <a href="https://www.estantevirtual.com.br/livreiros/sebomelivro" target="_blank">sebomelivro.com/loja</a><br>(2) <a href="https://wa.me/551198135055" target="_blank">sebomelivro.com/contato</a><br>(3) <a href="https://blogmelivro.wordpress.com/" target="_blank">sebomelivro.com/blog</a></p>
   <script defer>
     document.addEventListener("DOMContentLoaded", function () {
-      var e = "Bem-vindo ao Sebomelivro, um sebo digital de livros usados.\n\nOs livros disponíveis são vendidos pela Estante Virtual ou pelo WhatsApp e os pedidos são entregues pelos Correios ou pessoalmente nas catracas do metrô Fradique Coutinho.\n\nSe você tiver livros para doar, agende uma coleta gratuita no seu endereço em São Paulo.\n\nO atendimento é todo pelo WhatsApp: (11) 98135-0566.\n\nNo sebomelivro.com não há fotos ou vídeos. É como uma página de livro sendo digitada, um convite para mergulhar nas palavras sem distrações.\n\nO Sebomelivro não está presente em nenhuma rede social. Assim, sobra mais tempo para a gente ler um livro.\n\nBoas leituras!\n\nA.M. Guerreiro, livreiro";
+      var e = "O Sebomelivro é um sebo digital de livros usados.\n\nOs livros disponíveis são vendidos pela Estante Virtual (1) ou por mensagem via WhatsApp (2) e os pedidos são entregues pelos Correios ou pessoalmente nas catracas do metrô Fradique Coutinho.\n\nSe você tiver livros para doar, agende uma coleta gratuita no seu endereço em São Paulo.\n\nConfira meus artigos sobre livros no Blogmelivro (3).\n\nNo sebomelivro.com não há fotos nem vídeos. É como uma página de livro sendo digitada. Um convite para mergulhar nas palavras sem distrações.\n\nBoas leituras!\n\nA.M. Guerreiro, livreiro";
       var t = document.querySelector(".css-typing");
       e.split("").forEach(function (e, n) {
         var a = document.createElement("span");
