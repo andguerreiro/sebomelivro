@@ -9,31 +9,45 @@
   <title>Sebomelivro - Livre-se das telas. Leia um livro.</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Georgia", Times, serif;
       line-height: 1.6;
-      margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
       color: #333;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
     }
     h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       color: #333;
       text-align: center;
+      font-style: italic;
+      margin-bottom: 20px;
     }
     p {
       font-size: 1.1em;
       margin-bottom: 1.5em;
+      text-align: justify;
+      text-indent: 1.5em;
     }
     a {
-      color: #007bff;
-      text-decoration: none;
+      color: #333;
+      text-decoration: underline;
     }
     a:hover {
-      text-decoration: underline;
+      color: #333;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
